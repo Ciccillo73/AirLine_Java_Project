@@ -16,4 +16,8 @@ public class Flight {
         this.departureTime = departureTime;
         this.passengers = new ArrayList<Passenger>();
     }
+
+    public int countPassengers() {
+        return this.passengers.size();
+    }
 }
