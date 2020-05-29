@@ -20,4 +20,6 @@ public class PassengerTest {
     public void hasBags(){
          assertEquals(2, passenger.getNumberOfBags());
     }
+
+
 }
