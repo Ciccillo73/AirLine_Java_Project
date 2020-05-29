@@ -45,6 +45,8 @@ public class FlightManagerTest {
 
     @Test
     public void reservedLeftBaggageFlightWeigth() {
-
+        assertEquals(1455.00, flightmanager.leftBaggage(),0.01 );
     }
+
+
 }

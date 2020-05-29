@@ -23,4 +23,9 @@ public class FlightManager {
         return total;
     }
 
+
+    public double leftBaggage() {
+        double result = totalPlaneLuggageWeight() - totalBaggageWeigth();
+        return result;
+    }
 }

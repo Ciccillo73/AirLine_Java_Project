@@ -26,6 +26,8 @@ public class Flight {
     public void addPassenger(Passenger passenger1) {
         if(this.checkAvailableSeat() && !this.checkIfPassengerAlreadyInTheList(passenger1)){
             this.passengers.add(passenger1);
+            Flight flight1 = new Flight(this.plane, this.flightNumber, this.destinationAirport, this.departureAirport, this.departureTime);
+                    passenger1.setFlight(flight1);
         }
 
     }
