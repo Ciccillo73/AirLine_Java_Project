@@ -30,4 +30,8 @@ public class Flight {
     public void removePassenger() {
         this.passengers.remove(0);
     }
+
+    public boolean checkAvailableSeat() {
+        return (this.plane.getType().getCapacity() > this.countPassengers());
+    }
 }
