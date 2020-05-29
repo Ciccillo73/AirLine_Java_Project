@@ -26,9 +26,15 @@ public class FlightTest {
     }
 
     @Test
-    public void  canFlightGetPassengers(){
+    public void canFlightGetPassengers(){
         flight.addPassenger(passenger1);
         assertEquals(1, flight.countPassengers());
     }
 
+    @Test
+    public void removePassengerFromFlight() {
+        flight.addPassenger(passenger1);
+        flight.removePassenger();
+        assertEquals(0, flight.countPassengers());
+    }
 }
