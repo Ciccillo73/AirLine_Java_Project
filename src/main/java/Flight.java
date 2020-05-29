@@ -30,6 +30,14 @@ public class Flight {
 
     }
 
+    public Plane getPlane() {
+        return plane;
+    }
+
+    public ArrayList<Passenger> getPassengers() {
+        return passengers;
+    }
+
     public void removePassenger() {
         this.passengers.remove(0);
     }
