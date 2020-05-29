@@ -5,12 +5,17 @@ public class FlightManager {
         this.flight = flight;
     }
 
+    public double totalPlaneLuggageWeight(){
+        double result = this.flight.getPlane().getType().getTotalWeight() / 2;
+        return result;
+    }
+
     public double allowedBaggageWeigth(){
-        double baggageWeightPassenger = (this.flight.getPlane().getType().getTotalWeight() / 2 ) / (double) this.flight.getPlane().getType().getCapacity();
+        double baggageWeightPassenger = totalPlaneLuggageWeight() / (double) this.flight.getPlane().getType().getCapacity();
         return baggageWeightPassenger;
     }
 
-    public double totalBagggageWeigth() {
+    public double totalBaggageWeigth() {
         double total = 0.00;
         for(Passenger passenger: this.flight.getPassengers()){
             total += passenger.getNumberOfBags() * this.allowedBaggageWeigth() ;

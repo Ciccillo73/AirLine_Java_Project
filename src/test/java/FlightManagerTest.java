@@ -29,12 +29,22 @@ public class FlightManagerTest {
     }
 
     @Test
+    public void getTotalPLaneLuggageWeight() {
+        assertEquals(1500, flightmanager.totalPlaneLuggageWeight(),0.01);
+    }
+
+    @Test
     public void getTheAllowedBaggagePassengerWeigth(){
         assertEquals(7.5, flightmanager.allowedBaggageWeigth(),0.01);
     }
 
     @Test
     public void getBaggageWeigthPerFlight() {
-        assertEquals(45.00, flightmanager.totalBagggageWeigth(),001);
+        assertEquals(45.00, flightmanager.totalBaggageWeigth(),0.01);
+    }
+
+    @Test
+    public void reservedLeftBaggageFlightWeigth() {
+
     }
 }
