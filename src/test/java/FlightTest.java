@@ -26,7 +26,7 @@ public class FlightTest {
     }
 
     @Test
-    public void canAddPassengersIFThereIAvailbleSeat(){
+    public void canAddPassengersIfThereIAvailableSeat(){
         flight.addPassenger(passenger1);
         assertEquals(1, flight.countPassengers());
     }
@@ -52,5 +52,10 @@ public class FlightTest {
         assertFalse(flight.checkAvailableSeat());
     }
 
+    @Test
+    public void checkIfPassengerIsAlreadyBooked() {
+        flight.addPassenger(passenger1);
 
+        assertTrue(flight.checkIfPassengerAlreadyInTheList(passenger1));
+    }
 }

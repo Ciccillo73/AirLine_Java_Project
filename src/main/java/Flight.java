@@ -24,7 +24,7 @@ public class Flight {
 
 
     public void addPassenger(Passenger passenger1) {
-        if(checkAvailableSeat()){
+        if(this.checkAvailableSeat() && !this.checkIfPassengerAlreadyInTheList(passenger1)){
             this.passengers.add(passenger1);
         }
 
@@ -36,5 +36,10 @@ public class Flight {
 
     public boolean checkAvailableSeat() {
         return (this.plane.getType().getCapacity() > this.countPassengers());
+    }
+
+
+    public boolean checkIfPassengerAlreadyInTheList(Passenger passenger) {
+        return this.passengers.contains(passenger);
     }
 }
