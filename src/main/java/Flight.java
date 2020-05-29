@@ -20,4 +20,10 @@ public class Flight {
     public int countPassengers() {
         return this.passengers.size();
     }
+
+
+
+    public void addPassenger(Passenger passenger1) {
+        this.passengers.add(passenger1);
+    }
 }

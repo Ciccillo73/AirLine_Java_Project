@@ -25,4 +25,10 @@ public class FlightTest {
         assertEquals(0, flight.countPassengers());
     }
 
+    @Test
+    public void  canFlightGetPassengers(){
+        flight.addPassenger(passenger1);
+        assertEquals(1, flight.countPassengers());
+    }
+
 }
