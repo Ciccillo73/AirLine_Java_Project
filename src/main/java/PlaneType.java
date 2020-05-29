@@ -1,7 +1,9 @@
 public enum PlaneType {
+    SMALLJET(1,1000),
     BOEING(300, 5000),
     CONCORDE(200, 3000),
     SUPPAJET(800,10000);
+
 
     private final int capacity;
     private final int totalWeight;
